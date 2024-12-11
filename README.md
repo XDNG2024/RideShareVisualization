@@ -144,3 +144,65 @@ $breakpoints: (
 );
 ```
 </development_planning>
+
+
+
+
+
+Next.js route structure based on navigation menu items (excluding main route). Make sure to wrap all routes with the component:
+
+Routes:
+- /new-york
+- /chicago-city-selector
+
+Page Implementations:
+/new-york:
+Core Purpose: Display comprehensive information about New York City, including attractions, neighborhoods, and local information
+Key Components
+- Hero section with dynamic NYC skyline imagery
+- Borough selector with interactive map
+- Attraction cards grid with filtering options
+- Weather widget showing current NYC conditions
+- Transit status indicator for subway lines
+- Neighborhood guide with search functionality
+Layout Structure
+- Full-width hero section at top
+- Two-column layout for main content (desktop)
+- Single column stack for mobile
+- Sticky navigation for borough selection
+- Grid-based attraction cards (3 columns desktop, 2 tablet, 1 mobile)
+
+/chicago-city-selector:
+Core Purpose: Interactive tool for exploring Chicago neighborhoods and selecting areas of interest
+Key Components
+- Interactive Chicago map with clickable districts
+- Neighborhood comparison tool
+- Property availability counter
+- Transit accessibility scorer
+- Community statistics dashboard
+- Favorite neighborhood bookmarking system
+Layout Structure
+- Split screen design (map left, details right) on desktop
+- Stackable sections for mobile viewing
+- Floating action buttons for key functions
+- Collapsible neighborhood information panels
+- Bottom sheet navigation on mobile
+
+Layouts:
+CityLayout:
+Applicable routes
+- /new-york
+- /chicago-city-selector
+Core components
+- Global navigation header
+- City-specific search bar
+- Emergency information banner
+- Footer with city resources
+- Social sharing buttons
+Responsive behavior
+- Collapsible navigation menu on mobile
+- Adjustable content width based on screen size
+- Dynamic font scaling
+- Flexible grid system
+- Touch-friendly interactive elements on mobile
+- Sticky header with scroll behavior
